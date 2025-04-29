@@ -10,20 +10,19 @@ import { Ticket } from '../../entities/ticket';
 export class TicketItemComponent {
   @Input() ticket: Ticket | null = null;
 
-  get statusColor(): string {
+  get priorityColor(): string {
     if (!this.ticket) {
       return 'bg-gray-400';
     }
-
-    switch (this.ticket.status) {
-      case 'RESOLVED':
+    switch (this.ticket.priority) {
+      case 'LOW':
         return 'bg-green-400';
-      case 'IN_PROGRESS':
+      case 'MEDIUM':
         return 'bg-yellow-400';
-      case  'RESOLVED':
+      case  'HIGH':
         return 'bg-red-400';
       default:
-        return 'bg-gray-400'; // Si no hay status conocido
+        return 'bg-gray-400';
     }
   }
 }
