@@ -1,1 +1,26 @@
-<p>ticket-item works!</p>
+<div class="bg-white p-4 rounded-xl shadow-lg border hover:shadow-xl transition-all">
+  <div class="flex items-center mb-4">
+    <div
+    class="w-4 h-4 rounded-full mr-2"
+    [ngClass]="statusColor"
+    title="Status: {{ ticket?.status }}"
+  ></div>
+
+    <h3 class="font-bold text-lg text-gray-700">
+      Prioridad: <span class="text-primary">{{ ticket?.priority || 'N/A' }}</span>
+    </h3>
+  </div>
+
+  <div class="space-y-1 text-gray-600 text-sm">
+    <p><span class="font-semibold">Ticket ID:</span> {{ ticket?.id || 'No ID' }}</p>
+    <p><span class="font-semibold">Estado:</span> {{ ticket?.status || 'No Status' }}</p>
+    <p><span class="font-semibold">Nombre:</span> {{ ticket?.firstName || 'N/A' }}</p>
+    <p><span class="font-semibold">Apellido:</span> {{ ticket?.lastName || 'N/A' }}</p>
+  </div>
+
+  <div class="mt-4">
+    <p class="text-gray-800 text-sm">
+      <span class="font-semibold">Descripción:</span> {{ ticket?.description || 'No Description' }}
+    </p>
+  </div>
+</div>
