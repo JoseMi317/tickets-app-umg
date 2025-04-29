@@ -14,5 +14,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.language": "en,es",
-  "cSpell.words": ["Messer", "Resolutor"]
+  "cSpell.words": [
+    "Messer",
+    "Quintanilla",
+    "resolutor",
+    "Resolutor"
+  ]
 }
