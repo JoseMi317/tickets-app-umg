@@ -1,7 +1,12 @@
-<app-navbar>
-</app-navbar>
-<div>
-<h1>Resolver Page</h1>
-<p>Welcome to the Resolver page!</p>
-<p>This is a placeholder for the Resolver's content.</p>
+<div class="p-8">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <section class="bg-white h-[700px] rounded-lg shadow-md hover:shadow-lg transition-shadow p-4 lg:col-span-1">
+      <h2 class="text-lg font-semibold mb-4 text-center text-black">Tickets Asignados</h2>
+      <app-ticket-item></app-ticket-item>
+    </section>
+
+    <section class="bg-white h-[700px] rounded-lg shadow-md hover:shadow-lg transition-shadow p-4 lg:col-span-2">
+      <h2 class="text-lg font-semibold mb-4 text-center text-black">Resolver Ticket</h2>
+    </section>
+  </div>
 </div>

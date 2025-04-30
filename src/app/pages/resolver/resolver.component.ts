@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from "../../components/navbar/navbar.component";
+import { TicketItemComponent } from "../../components/ticket-item/ticket-item.component";
 
 @Component({
   selector: 'app-resolver',
-  imports: [NavbarComponent],
+  imports: [TicketItemComponent],
   templateUrl: './resolver.component.html',
   styles: ``
 })
