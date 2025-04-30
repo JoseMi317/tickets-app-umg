@@ -1,1 +1,106 @@
-<p>tickets-form works</p>
+<div class="h-[700px] overflow-y-auto bg-gray-50 rounded-lg p-4 space-y-4 ">
+    <div class="flex justify-center items-center my-[30px]">
+        <h1 class="text-[25px]">Registration form</h1>
+    </div>
+    <form [formGroup]="agentForm" (ngSubmit)="sendData()" class="max-w-5xl mx-auto">
+        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-12">
+            <!-- identification -->
+            <div class="sm:col-span-4">
+                <label for="identification" class="block text-sm font-medium text-gray-700">Identification</label>
+                <fieldset class="fieldset">
+                    <input id="identification" type="text" class="input" formControlName="identification"
+                        placeholder="Identification" />
+                </fieldset>
+            </div>
+
+            <!-- firstName -->
+            <div class="sm:col-span-4">
+                <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
+                <fieldset class="fieldset">
+                    <input id="firstName" type="text" class="input" formControlName="firstName"
+                        placeholder="First Name" />
+                </fieldset>
+            </div>
+
+            <!-- lastName -->
+            <div class="sm:col-span-4">
+                <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
+                <fieldset class="fieldset">
+                    <input id="lastName" type="text" class="input" formControlName="lastName" placeholder="Last Name" />
+                </fieldset>
+            </div>
+
+            <!-- phoneNumber -->
+            <div class="sm:col-span-4">
+                <label for="phoneNumber" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                <label class="input validator">
+                    <input id="phoneNumber" type="tel" class="tabular-nums" formControlName="phoneNumber"
+                        placeholder="Phone Number" pattern="[0-9]*" minlength="10" maxlength="10" required
+                        title="Must be 10 digits" />
+                </label>
+                <p class="validator-hint">Must be 10 digits</p>
+            </div>
+
+            <!-- email -->
+            <div class="sm:col-span-4">
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <label class="input validator">
+                    <input id="email" type="email" formControlName="email" placeholder="Email" required />
+                </label>
+                <p class="validator-hint hidden">Invalid email</p>
+            </div>
+
+            <!-- priority -->
+            <div class="sm:col-span-4">
+                <label for="priority" class="block text-sm font-medium text-gray-700">Priority</label>
+                <select id="priority" class="select" formControlName="priority">
+                    <option disabled selected>Select Priority</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+            </div>
+
+            <!-- status -->
+            <div class="sm:col-span-4">
+                <label for="status" class="block text-sm font-medium text-gray-700">Status</label>
+                <select id="status" class="select" formControlName="status">
+                    <option disabled selected>Select Status</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Process">In Process</option>
+                    <option value="Resolved">Resolved</option>
+                </select>
+            </div>
+
+            <!-- description -->
+            <div class="sm:col-span-4">
+                <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
+                <textarea id="description" class="textarea" formControlName="description"
+                    placeholder="Description"></textarea>
+            </div>
+
+            <!-- createdAt -->
+            <div class="sm:col-span-4">
+                <label for="createdAt" class="block text-sm font-medium text-gray-700">Created At</label>
+                <fieldset class="fieldset">
+                    <input id="createdAt" type="datetime-local" class="input" formControlName="createdAt" />
+                </fieldset>
+            </div>
+
+            <!-- createdBy.id -->
+            <div class="sm:col-span-4">
+                <label for="createdBy" class="block text-sm font-medium text-gray-700">Created By (User ID)</label>
+                <fieldset class="fieldset">
+                    <input id="createdBy" type="text" class="input" formControlName="createdBy" placeholder="User ID" />
+                </fieldset>
+            </div>
+
+        </div>
+        <div class="sm:col-span-12 text-right">
+            <button type="submit" (click)="sendData()"
+                class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200">
+                Submit Ticket
+            </button>
+        </div>
+    </form>
+</div>

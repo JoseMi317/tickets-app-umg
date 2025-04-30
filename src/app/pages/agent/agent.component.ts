@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from "../../components/navbar/navbar.component";
+import { TicketsFormComponent } from "../../components/tickets-form/tickets-form.component";
 
 @Component({
   selector: 'app-agent',
-  imports: [NavbarComponent],
+  imports: [TicketsFormComponent],
   templateUrl: './agent.component.html',
   styles: ``
 })
