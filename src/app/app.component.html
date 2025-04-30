@@ -1,4 +1,11 @@
+@if(!isLoginRoute()){
 <app-navbar></app-navbar>
-<div class="flex h-screen w-full justify-center overflow-hidden">
-    <router-outlet></router-outlet>
+}
+@if(!isLoginRoute()){
+<div class="container mx-auto h-[calc(100vh-140px)] max-h-[calc(100vh-90px)] overflow-hidden py-6">
+  <router-outlet></router-outlet>
 </div>
+}
+@if(isLoginRoute()){
+<router-outlet></router-outlet>
+}

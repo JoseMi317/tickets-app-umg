@@ -7,22 +7,27 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
   templateUrl: './tickets-form.component.html',
 })
 export class TicketsFormComponent {
-  miFormulario: FormGroup;
+  agentForm: FormGroup;
 
-  constructor(
-    private fb: FormBuilder,
-  ) {
-    this.miFormulario = this.fb.group({
-      nombre: [''],
+  constructor(private fb: FormBuilder) {
+    this.agentForm = this.fb.group({
+      identification: [''],
+      firstName: [''],
+      lastName: [''],
+      phoneNumber: [''],
       email: [''],
-      telefono: [''],
-      mensaje: ['']
+      priority: [''],
+      status: [''],
+      description: [''],
+      createdAt: [''],
+      updatedAt: [''],
+      createdBy: [''], // Assuming it's just the user ID as a string
     });
   }
 
-  enviarDatos() {
-    if (this.miFormulario.valid) {
-      const datos = this.miFormulario.value;
+  sendData() {
+    if (this.agentForm.valid) {
+      const datos = this.agentForm.value;
       //this.webSocketService.enviar(datos); // Aquí lo mandas al WebSocket
     }
   }
