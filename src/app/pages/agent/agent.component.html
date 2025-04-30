@@ -1,3 +1,12 @@
-<div class="m-10">
-  <app-tickets-form></app-tickets-form>
+<div class="p-8">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <section class="bg-black/10 h-[700px] rounded-lg shadow-md p-4 lg:col-span-1">
+      <h2 class="text-lg font-semibold mb-4 text-center text-black">Tickets in Queue</h2>
+      <app-tickets-queue></app-tickets-queue>
+    </section>
+
+    <div class=" h-[700px] rounded-lg shadow-md  lg:col-span-2">
+      <app-tickets-form></app-tickets-form>
+    </div>
+  </div>
 </div>
