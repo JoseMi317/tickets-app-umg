@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
@@ -7,9 +7,10 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
   templateUrl: './tickets-form.component.html',
 })
 export class TicketsFormComponent {
-  agentForm: FormGroup;
+  readonly agentForm: FormGroup;
+  readonly fb = inject(FormBuilder);
 
-  constructor(private fb: FormBuilder) {
+  constructor() {
     this.agentForm = this.fb.group({
       identification: [''],
       firstName: [''],
