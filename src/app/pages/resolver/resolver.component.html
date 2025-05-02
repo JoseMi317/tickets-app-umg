@@ -1,82 +1,44 @@
 <div class="p-8">
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-    <section class="bg-black/10 h-[700px] rounded-lg shadow-md p-4 lg:col-span-1">
-      <h2 class="text-lg font-semibold mb-4 text-center text-black">Tickets Assigned</h2>
+    <div class="bg-black/10 h-[700px] rounded-lg shadow-md p-4 lg:col-span-1">
       <app-ticket-item></app-ticket-item>
-    </section>
+    </div>
 
-    <section class="bg-black/10 h-[700px] rounded-lg shadow-md p-4 lg:col-span-2">
+    <div class="bg-black/10 h-[700px] rounded-lg shadow-md p-4 lg:col-span-2">
       <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Info Ticket</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label class="label font-semibold text-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-            </svg>
-            Identification
-          </label>
+          <label class="label font-semibold text-gray-700">Identification</label>
           <input disabled type="text" class="input input-bordered w-full" placeholder="ID del ticket" />
         </div>
 
         <div>
-          <label class="label font-semibold text-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z" />
-            </svg>
-            Complete Name
-          </label>
+          <label class="label font-semibold text-gray-700">Complete Name</label>
           <input disabled type="text" class="input input-bordered w-full" placeholder="Name Patient" />
         </div>
 
         <div>
-          <label class="label font-semibold text-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
-            </svg>
-            Phone
-          </label>
+          <label class="label font-semibold text-gray-700">Phone</label>
           <input disabled type="text" class="input input-bordered w-full" placeholder="Number" />
         </div>
 
         <div>
-          <label class="label font-semibold text-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-            </svg>
-            Email
-          </label>
+          <label class="label font-semibold text-gray-700">Email</label>
           <input disabled type="email" class="input input-bordered w-full" placeholder="Email" />
         </div>
 
         <div>
-          <label class="label font-semibold text-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
-            </svg>
-            Status
-          </label>
-          <input disabled type="text" class="input input-bordered w-full" placeholder="In Process" />
+          <label class="label font-semibold text-gray-700">Status</label>
+          <select class="select select-bordered w-full">
+            <option>In Process</option>
+            <option>Resolved</option>
+            <option>Closed</option>
+          </select>
         </div>
 
         <div>
-          <label class="label font-semibold text-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M8.242 5.992h12m-12 6.003H20.24m-12 5.999h12M4.117 7.495v-3.75H2.99m1.125 3.75H2.99m1.125 0H5.24m-1.92 2.577a1.125 1.125 0 1 1 1.591 1.59l-1.83 1.83h2.16M2.99 15.745h1.125a1.125 1.125 0 0 1 0 2.25H3.74m0-.002h.375a1.125 1.125 0 0 1 0 2.25H2.99" />
-            </svg>
-            Priority
-          </label>
+          <label class=" label font-semibold text-gray-700">Priority</label>
           <select class="select select-bordered w-full">
             <option>LOW</option>
             <option>MEDIUM</option>
@@ -85,39 +47,18 @@
         </div>
 
         <div class="md:col-span-2">
-          <label class="label font-semibold text-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
-            </svg>
-            Details and Recipe
-          </label>
+          <label class="label font-semibold text-gray-700">Details and Recipe</label>
           <textarea class="textarea textarea-bordered w-full" rows="4"
             placeholder="Explain the details and give a recipe."></textarea>
         </div>
 
         <div>
-          <label class="label font-semibold text-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
-            </svg>
-            Create Date
-          </label>
+          <label class="label font-semibold text-gray-700">Create Date</label>
           <input disabled type="text" class="input input-bordered w-full" placeholder="Ej: 2025-04-29 14:30" />
         </div>
 
         <div>
-          <label class="label font-semibold text-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25" />
-            </svg>
-            Create By
-          </label>
+          <label class="label font-semibold text-gray-700">Create By</label>
           <input disabled type="text" class="input input-bordered w-full"
             placeholder="Name of person to create the ticket" />
         </div>
@@ -125,7 +66,7 @@
 
       <div class="mt-6 flex justify-center">
         <button class="btn btn-success gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+          <svg xmlns=" http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" />
@@ -133,7 +74,6 @@
           Resolver Ticket
         </button>
       </div>
-
-    </section>
+    </div>
   </div>
 </div>
